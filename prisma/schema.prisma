@@ -34,7 +34,7 @@ model Server {
   id String @id @default(uuid())
   name String
   imageUrl String @db.Text
-  inviteCode String @db.Text
+  inviteCode String @unique
 
 
   profileId String
@@ -42,7 +42,7 @@ model Server {
 
 
   members Member[]
-  channnels Channel[]
+  channels Channel[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
