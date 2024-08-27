@@ -38,7 +38,7 @@ export async function POST(
                 }
             },
             data: {
-                channnels: {
+                channels: {
                     create: {
                         profileId: profile.id,
                         name,
@@ -47,6 +47,7 @@ export async function POST(
                 }
             }
         })
+        return NextResponse.json(server);
     } catch (error) {
         console.log("CHANNELS_POST", error);
         return new NextResponse("Internal Server Error", {

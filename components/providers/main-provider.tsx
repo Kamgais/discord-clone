@@ -3,6 +3,7 @@
 import { ClerkProvider } from "@clerk/nextjs"
 import { ThemeProvider } from "./theme-provider"
 import { ModalProvider } from "./modal-provider"
+import { SocketProvider } from "./socket-provider"
 
 function AppProviders({
     children
@@ -17,9 +18,11 @@ function AppProviders({
           enableSystem={false}
           storageKey="discord-theme"
         >
+            <SocketProvider>
             <ModalProvider>
                 {children}
             </ModalProvider>
+            </SocketProvider>
         </ThemeProvider>
     </ClerkProvider>
   )
