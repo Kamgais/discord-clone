@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs"
 import { ThemeProvider } from "./theme-provider"
 import { ModalProvider } from "./modal-provider"
 import { SocketProvider } from "./socket-provider"
+import { QueryProvider } from "./query-provider"
 
 function AppProviders({
     children
@@ -20,7 +21,9 @@ function AppProviders({
         >
             <SocketProvider>
             <ModalProvider>
+              <QueryProvider>
                 {children}
+              </QueryProvider>
             </ModalProvider>
             </SocketProvider>
         </ThemeProvider>
