@@ -48,7 +48,7 @@ function ServerChannel({
     onClick={onClick}
     className={cn(
         "group px-2 py-2 rounded-md flex items-center gap-x-2 w-full hover:bg-zinc-700/50 transition mb-1",
-        params.channelId === channel.id && "bg-zinc-70/20  dark:bg-zinc-700" 
+        params?.channelId === channel.id && "bg-zinc-70/20  dark:bg-zinc-700" 
     )}
     >
         <Icon className="flex-schrink-0 w-5 h-5 text-zinc-500 dark:text-zinc-400 "/>
