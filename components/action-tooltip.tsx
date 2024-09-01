@@ -15,7 +15,7 @@ import {
     align?: "start" | "center" | "end"
   }
 
-function ActionTooltip({
+export function ActionTooltip({
     label,
     children,
     side,
@@ -38,4 +38,3 @@ function ActionTooltip({
   )
 }
 
-export default ActionTooltip
