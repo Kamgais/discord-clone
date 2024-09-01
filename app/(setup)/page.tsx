@@ -9,7 +9,8 @@ const profile = await initialProfile();
 
 if(!profile) {
     return (
-        <RedirectToSignIn />
+        // <RedirectToSignIn />
+        redirect('/sign-in')
     )
 }
 
